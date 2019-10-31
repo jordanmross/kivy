@@ -60,11 +60,8 @@ class ShowcaseApp(App):
         Clock.schedule_interval(self._update_clock, 1 / 60.)
         self.screens = {}
         self.available_screens = [
-            'Buttons', 'ToggleButton', 'Sliders', 'ProgressBar', 'Switches',
-            'CheckBoxes', 'TextInputs', 'Accordions', 'FileChoosers',
-            'Carousel', 'Bubbles', 'CodeInput', 'DropDown', 'Spinner',
-            'Scatter', 'Splitter', 'TabbedPanel + Layouts', 'RstDocument',
-            'Popups', 'ScreenManager']
+            'Start', 'ParentName', 'ShippingAddress', 'ParentEmail', 
+            'GridSize', 'Instructions', 'Capture', 'Confirmation']
         self.screen_names = self.available_screens
         curdir = dirname(__file__)
         self.available_screens = [join(curdir, 'data', 'screens',
