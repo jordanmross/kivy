@@ -8,10 +8,11 @@ ShowcaseScreen:
         size_hint: .5, None
         height: self.minimum_height
 
-        Image:
-            source: 'data/faust_github.jpg'
-            size: 100, 200
-            
+        canvas.before:
+                Rectangle:
+                    pos: self.parent.center_x - self.width / 2, self.parent.center_y - self.height / 2
+                    source: 'data/faust_github.jpg'
+
         Button:
             size_hint_y: None
             text: 'Button normal'
