@@ -1,19 +1,21 @@
 ShowcaseScreen:
     name: 'Instructions'
 
-    BoxLayout:
-        orientation: "vertical"
+    Widget:
 
-        FloatLayout:
-            canvas:
-                Color:
-                    rgb: 1, 1, 1
-                Rectangle:
-                    source: 'data/images/background.jpg'
-                    size: self.size
+        Scatter:
+            id: scatter
+            size_hint: None, None
+            size: image.size
+            do_rotation: False
+            do_scale: False
+            do_translation: False
 
-        Button:
-            size_hint_y: None
-            text: 'Button normal'
-            height: '48dp'
-            on_release: app.go_next_screen()
+            Image:
+                id: image
+                source: 'data/faust_github.jpg'
+                size: 300,200
+    Button:
+        size_hint_y: None
+        height: '48dp'
+        text: 'Next'
