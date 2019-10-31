@@ -1,36 +1,29 @@
 ShowcaseScreen:
     name: 'Instructions'
 
-    GridLayout:
-
-        cols: 1
-        rows: 3
-        spacing: '8dp'
-        size_hint: .5, None
-        height: self.minimum_height
+    FloatLayout:
     
+        Label:
+            text: 'Please place the AAC device as shown below.'
+            size_hint_y: None
+            height: '48dp'
 
-    Label:
-        text: 'Please place the AAC device as shown below.'
-        size_hint_y: None
-        height: '48dp'
+        Widget:
 
-    Widget:
+            Scatter:
+                id: scatter
+                size_hint: None, None
+                size: image.size
+                do_rotation: False
+                do_scale: False
+                do_translation: False
+                pos: 250, 200
 
-        Scatter:
-            id: scatter
-            size_hint: None, None
-            size: image.size
-            do_rotation: False
-            do_scale: False
-            do_translation: False
-            pos: 250, 200
-
-            Image:
-                id: image
-                source: 'data/faust_github.jpg'
-                size: 350, 250
-    Button:
-        size_hint_y: None
-        height: '48dp'
-        text: 'Next'
+                Image:
+                    id: image
+                    source: 'data/faust_github.jpg'
+                    size: 350, 250
+        Button:
+            size_hint_y: None
+            height: '48dp'
+            text: 'Next'
