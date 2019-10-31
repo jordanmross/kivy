@@ -4,10 +4,13 @@ ShowcaseScreen:
     BoxLayout:
         orientation: "vertical"
 
-        Image:
-            id: imageView
-            source: 'data/faust_github.jpg'
-            allow_stretch: True
+        FloatLayout:
+            canvas:
+                Color:
+                    rgb: 1, 1, 1
+                Rectangle:
+                    source: 'data/images/background.jpg'
+                    size: self.size
 
         Button:
             size_hint_y: None
