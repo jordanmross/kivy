@@ -18,12 +18,9 @@ ShowcaseScreen:
                 id: image
                 source: 'data/faust_github.jpg'
                 size: 150, 200
-                pos_hint: {'center_y': 0.5, 'center_x': 0.5}
-
 
         Button:
             size_hint_y: None
             height: '48dp'
             text: 'Button normal'
             on_release: image.reload()
-            pos_hint: {'center_y': 0.5, 'center_x': 0.75}
