@@ -34,6 +34,7 @@ from kivy.properties import NumericProperty, StringProperty, BooleanProperty,\
 from kivy.clock import Clock
 from kivy.animation import Animation
 from kivy.uix.screenmanager import Screen
+from kivy.uix.floatlayout import FloatLayout 
 
 
 class ShowcaseScreen(Screen):
@@ -43,6 +44,8 @@ class ShowcaseScreen(Screen):
         if 'content' in self.ids:
             return self.ids.content.add_widget(*args)
         return super(ShowcaseScreen, self).add_widget(*args)
+
+    
 
 
 class ShowcaseApp(App):
@@ -142,14 +145,8 @@ class ShowcaseApp(App):
         self.root.ids.sourcecode.text = self.read_sourcecode()
         self.root.ids.sv.scroll_y = 1
 
-    def showcase_floatlayout(self, layout):
-
-        def add_button(*t):
-            if not layout.get_parent_window():
-                return
-            if len(layout.children) > 5:
-                layout.clear_widgets()
-            layout.add_widget(Builder.load_string('''
+    def floatlayout(self, layout):
+        pass
 #:import random random.random
 Button:
     size_hint: random(), random()
