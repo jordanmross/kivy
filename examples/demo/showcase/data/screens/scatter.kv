@@ -13,8 +13,12 @@ ShowcaseScreen:
             source: 'data/faust_github.jpg'
             size: 300, 400
             pos_hint: {"right": 0.5, 'top':1}
-    Button:
-        size_hint_y: None
-        height: '48dp'
-        text: 'Button normal'
-        on_release: image.reload()
+
+    Widget:
+
+        Button:
+            size_hint_y: None
+            height: '48dp'
+            text: 'Button normal'
+            on_release: image.reload()
+            pos_hint: {"right": 0.5, 'top':0.5}
