@@ -1,6 +1,11 @@
 ShowcaseScreen:
     name: 'Instructions'
 
+    Label:
+        text: 'Please place the AAC device as shown below.'
+        size_hint_y: None
+        height: '48dp'
+
     Widget:
 
         Scatter:
@@ -10,12 +15,12 @@ ShowcaseScreen:
             do_rotation: False
             do_scale: False
             do_translation: False
-            pos: 300,200
+            pos: 250, 200
 
             Image:
                 id: image
                 source: 'data/faust_github.jpg'
-                size: 300,200
+                size: 400, 300
     Button:
         size_hint_y: None
         height: '48dp'
