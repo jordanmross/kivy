@@ -1,19 +1,16 @@
 ShowcaseScreen:
     name: 'Instructions'
 
-    GridLayout:
+    BoxLayout:
+        orientation: "vertical"
 
-        cols: 1
-        spacing: '8dp'
-        size_hint: .5, None
-        height: self.minimum_height
-
-        canvas.before:
-            Rectangle:
-                pos: self.parent.center_x - self.width / 2, self.parent.center_y - self.height / 2
-                source: 'data/faust_github.jpg'
+        Image:
+              id: imageView
+              source: 'data/faust_github.jpg'
+              allow_stretch: True
 
         Button:
             size_hint_y: None
             text: 'Button normal'
             height: '48dp'
+            on_release: app.go_next_screen()
