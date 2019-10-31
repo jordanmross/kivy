@@ -61,7 +61,7 @@ class ShowcaseApp(App):
         self.screens = {}
         self.available_screens = [
             'Start', 'ParentName', 'ShippingAddress', 'ParentEmail', 'GridSize',
-            'Instructions', 'Capture', 'Confirmation',
+            'Instructions', 'Capture', 'Confirmation']
         self.screen_names = self.available_screens
         curdir = dirname(__file__)
         self.available_screens = [join(curdir, 'data', 'screens',
