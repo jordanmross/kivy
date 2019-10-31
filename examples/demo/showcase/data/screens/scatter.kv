@@ -12,3 +12,9 @@ ShowcaseScreen:
         id: image
         source: 'data/faust_github.jpg'
         size: self.texture_size
+
+    Button:
+        size_hint_y: None
+        height: '48dp'
+        text: 'Button normal'
+        on_release: image.reload()
