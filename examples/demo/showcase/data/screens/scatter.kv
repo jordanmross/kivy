@@ -12,11 +12,11 @@ ShowcaseScreen:
             id: image
             source: 'data/icons/bug.png'
             size: self.texture_size
-            pos: 300, 200
+            pos: 300, 300
 
     Button:
-        size_hint: .5, .25
-        pos: 20,20
+        size_hint_y: None
+        pos: 300, 50
         height: '48dp'
         text: 'Button normal'
         on_release: image.reload()
