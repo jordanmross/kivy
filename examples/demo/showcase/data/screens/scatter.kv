@@ -7,15 +7,12 @@ ShowcaseScreen:
         #     id: scatter
         size_hint: None, None
         size: image.size
-        center_x = x + width / 2
-        center_y = y + height / 2
-
-
+        
         Image:
             id: image
             source: 'data/icons/bug.png'
             size: self.texture_size
-            pos: center_x, center_y
+            pos: height / 2, width / 2
 
     Button:
         size_hint_y: None
