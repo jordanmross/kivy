@@ -3,12 +3,11 @@ ShowcaseScreen:
 
     BoxLayout:
 
-        Widget:
-
-            Image:
-                id: image
+        Canvas:
+            Rectangle:
                 source: 'data/faust_github.jpg'
-                size: 150, 200
+                pos: self.pos
+                size: self.size
 
         Button:
             size_hint_y: None
