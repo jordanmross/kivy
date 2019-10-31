@@ -7,17 +7,18 @@ ShowcaseScreen:
         #     id: scatter
         size_hint: None, None
         size: image.size
+        center_x = x + width / 2
+        center_y = y + height / 2
 
 
         Image:
             id: image
             source: 'data/icons/bug.png'
             size: self.texture_size
-            pos: 350, 300
+            pos: center_x, center_y
 
     Button:
         size_hint_y: None
         height: '48dp'
         text: 'Button normal'
-        pos: 350, 100
         on_release: image.reload()
