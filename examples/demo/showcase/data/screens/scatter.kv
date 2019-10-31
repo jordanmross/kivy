@@ -12,7 +12,7 @@ ShowcaseScreen:
             id: image
             source: 'data/faust_github.jpg'
             size: 300, 400
-            pos_hint: {"right": 0.5, 'top':1}
+            pos_hint: {'center_y': 0.5, 'center_x': 0.5}
 
     FloatLayout:
 
@@ -21,4 +21,4 @@ ShowcaseScreen:
             height: '48dp'
             text: 'Button normal'
             on_release: image.reload()
-            pos_hint: {"right": 0.5, 'top':0.5}
+            pos_hint: {'center_y': 0.5, 'center_x': 0.75}
